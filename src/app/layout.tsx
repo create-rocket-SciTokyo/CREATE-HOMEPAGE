@@ -13,10 +13,10 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto-sans-jp" })
 
 export const metadata: Metadata = {
-    title: "ひろゆき、マイナンバーカードを持たない人に持論 さまざまな意見集まる",
+    title: "東京科学大学ロケットサークルCREATE",
     openGraph: {
-        title: "ひろゆき、マイナンバーカードを持たない人に持論 さまざまな意見集まる",
-        images: ["/metaHiro.png"],
+        title: "東京科学大学ロケットサークルCREATE",
+        images: ["/logo.jpg"],
     },
 }
 
