@@ -27,6 +27,9 @@ export const metadata: Metadata = {
         title: "東京科学大学ロケットサークル",
         images: ["/CREATE_moji.png"],
     },
+    verification: {
+        google: <meta name="google-site-verification" content="0sS2zDvaqPHZv-CAtckXYHYnp2zamcP9Q9K1n5tx2AM" />,
+    },
 }
 
 export default function RootLayout({
