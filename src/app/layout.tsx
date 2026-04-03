@@ -13,10 +13,19 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto-sans-jp" })
 
 export const metadata: Metadata = {
-    title: "東京科学大学ロケットサークルCREATE",
+    title: {
+        default: "CREATE | 東京科学大学ロケットサークル",
+        template: "%s | CREATE"
+    },
+    description: "東京科学大学ロケットサークル CREATE の公式サイトです。ロケット、エンジン、CanSatなどの開発プロジェクトを紹介します。",
+    icons: {
+        icon: "/CREATE-LOGO.png",
+        shortcut: "/CREATE-LOGO.png",
+        apple: "/CREATE-LOGO.png",
+    },
     openGraph: {
-        title: "東京科学大学ロケットサークルCREATE",
-        images: ["/logo.jpg"],
+        title: "東京科学大学ロケットサークル",
+        images: ["/CREATE_moji.png"],
     },
 }
 
