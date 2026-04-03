@@ -1,0 +1,75 @@
+﻿
+> ui0209@0.1.0 build
+> next build
+
+   笆ｲ Next.js 15.1.6
+   - Environments: .env
+
+   Creating an optimized production build ...
+ 笨・Compiled successfully
+   Linting and checking validity of types ...
+
+./src/app/MainPage/components/Social.tsx
+57:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/ui/LogoLoop.tsx
+185:6  Warning: React Hook useEffect has a missing dependency: 'trackRef'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/10) ...
+node.exe :  笞 metad
+ataBase property in 
+metadata export is n
+ot set for resolving
+ social open graph o
+r twitter images, us
+ing "http://localhos
+t:3000". See https:/
+/nextjs.org/docs/app
+/api-reference/funct
+ions/generate-metada
+ta#metadatabase
+発生場所 C:\Program File
+s\nodejs\npm.ps1:29 
+文字:3
++   & $NODE_EXE $NPM
+_CLI_JS $args
++   ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo  
+            : NotS  
+  pecified: ( 笞    
+ metadataBas...t    
+a#metadatabase:    S
+tring) [], Rem    ot
+eException
+    + FullyQualifie 
+   dErrorId : Nati  
+  veCommandError
+ 
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+   Generating static pages (7/10) 
+ 笨・Generating static pages (10/10)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+笏・笳・/                                    22.1 kB         180 kB
+笏・笳・/_not-found                          979 B           106 kB
+笏・笳・/AboutUsPage                         2.94 kB         158 kB
+笏・ﾆ・/api/social                          144 B           106 kB
+笏・笳・/ContactPage                         2.98 kB         158 kB
+笏・笳・/Fund&SponsorPage                    20.9 kB         184 kB
+笏・笳・/ProjectsPage                        7.6 kB          162 kB
+笏・笳・/TechPage                            2.52 kB         169 kB
++ First Load JS shared by all            105 kB
+  笏・chunks/4bd1b696-1d398b649b281e55.js  52.9 kB
+  笏・chunks/517-d4b1b782ce3beff8.js       50.5 kB
+  笏・other shared chunks (total)          1.98 kB
+
+
+笳・ (Static)   prerendered as static content
+ﾆ・ (Dynamic)  server-rendered on demand
+

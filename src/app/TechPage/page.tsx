@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import Header from "@/components/ui/Header"
 import Footer from "@/components/ui/Footer"
 import MaintenanceView from "./components/MaintenanceView"
+
+export const metadata: Metadata = {
+  title: "TECH",
+};
 
 export const revalidate = 10800;// 3 hours 
 
