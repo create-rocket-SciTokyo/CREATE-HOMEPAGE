@@ -16,6 +16,8 @@ const sponsors: Sponsor[] = [
   { name: "工機ホールディングス株式会社", logo: "/hikoki.jpg", url: "https://example.com", id: "02" },
   { name: "ZONeエナジー", logo: "/zone.jpg", url: "https://example.com", id: "03" },
   { name: "NEWS COMPANY", logo: "/newscompany.png", url: "https://example.com", id: "04" },
+  { name: "ANSYS", logo: "/ANSYS_logo_whiteback.png", url: "https://example.com", id: " 05" },
+  { name: "JLCPCB", logo: "/JLCPCB.jpg", url: "https://exmaple.com", id: "06"},
 ]
 
 const supportingOrganizations = [
