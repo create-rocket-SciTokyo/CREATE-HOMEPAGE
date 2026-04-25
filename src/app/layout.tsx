@@ -6,6 +6,7 @@ import { Suspense } from 'react'
 import type React from "react"
 import Loading from "./loading"
 import { LanguageProvider } from "@/context/LanguageContext"
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const poppins = Poppins({ weight: ["400", "600"], subsets: ["latin"], variable: "--font-poppins" })
@@ -44,6 +45,7 @@ export default function RootLayout({
                     <LanguageProvider>
                         <Loading />
                         {children}
+                        <Analytics />
                     </LanguageProvider>
                 </Suspense>
             </body>
