@@ -45,6 +45,7 @@ export default function RootLayout({
                     <LanguageProvider>
                         <Loading />
                         {children}
+                        <Analytics />
                     </LanguageProvider>
                 </Suspense>
             </body>
