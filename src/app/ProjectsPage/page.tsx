@@ -227,6 +227,8 @@ export default function ProjectsPage() {
                           </span>
                         ) : project.period.includes("断念") ? (
                           <span className="text-red-500">{t.projectsPage.specs.terminated}</span>
+                        ) : project.period.includes("統合") ? (
+                          <span className="text-red-500">{t.projectsPage.specs.integrated}</span>
                         ) : (
                           <span className="text-green-500">{t.projectsPage.specs.completed}</span>
                         )}
