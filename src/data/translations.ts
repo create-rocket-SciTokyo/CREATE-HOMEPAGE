@@ -278,7 +278,8 @@ export const translations = {
                 status: "STATUS",
                 inProgress: "IN PROGRESS",
                 terminated: "TERMINATED",
-                completed: "COMPLETED"
+                completed: "COMPLETED",
+                integrated: "INTEGRATED"
             }
         }
     },
@@ -561,7 +562,8 @@ export const translations = {
                 status: "STATUS",
                 inProgress: "IN PROGRESS",
                 terminated: "TERMINATED",
-                completed: "COMPLETED"
+                completed: "COMPLETED",
+                integrated: "INTEGRATED"
             }
         }
     }
