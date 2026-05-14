@@ -312,7 +312,7 @@ export const projectsData = [
     name: "C-103J",
     period: "2026/03/27",
     category: "ロケット",
-    thumbnail: "/103.png",
+    thumbnail: "/103.jpg",
     altitude: "1000m",
     length: "1440mm",
     weight: "7.983kg",
