@@ -309,7 +309,7 @@ export const projectsData = [
   },
   {
     id: "25",
-    name: "C-103J",
+    name: "C-103J(†Bloody Phoenix†)",
     period: "2026/03/27",
     category: "ロケット",
     thumbnail: "/103.jpg",
