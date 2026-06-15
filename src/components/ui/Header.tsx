@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Menu, X, Globe } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
+import Link from "next/link"
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -21,14 +22,16 @@ export default function Header() {
                 <div className="container mx-auto px-2 sm:px-6 lg:px-8">
                     <div className="relative flex justify-between items-center h-16 max-w-full overflow-hidden">
                         <div className="flex items-center flex-shrink-0">
-                            <Image
-                                src="/CREATE_moji_negate.png"
-                                alt="Logo"
-                                width={240}
-                                height={240}
-                                className="object-contain drop-shadow-lg w-20 h-20 sm:w-40 sm:h-40"
-                                priority
-                            />
+                            <Link href="/">
+                                <Image
+                                    src="/CREATE_moji_negate.png"
+                                    alt="Logo"
+                                    width={240}
+                                    height={240}
+                                    className="object-contain drop-shadow-lg w-20 h-20 sm:w-40 sm:h-40"
+                                    priority
+                                />
+                            </Link>
                         </div>
                         <nav className="hidden md:flex items-center gap-6">
                             <ul className="flex space-x-4 lg:space-x-8 text-sm text-white/90">
