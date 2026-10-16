@@ -365,8 +365,8 @@ export const projectsData = [
     altitude: "N/A",
     length: "N/A",
     weight: "N/A",
-    caption: "",
-    captionEn: "",
+    caption: "複数センサーを組み合わせた自己位置推定と、走行不能状態からの復帰機能を備えたランバック機体。自律走行の安定性を高め、より確実なゴール到達を目指した。",
+    captionEn: "A ‘RunBack’ vehicle equipped with a self-localisation system combining multiple sensors and a function to recover from situations where it is unable to move. The aim was to enhance the stability of autonomous navigation and ensure more reliable arrival at the destination.",
     periodEn: "2026/08"
   },
 ]
