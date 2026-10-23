@@ -369,7 +369,7 @@ export const projectsData = [
   {
     id: "29",
     name: "C-107m",
-    period: "2027/08",
+    period: "2027/08（予定）",
     category: "ロケット",
     thumbnail: "N/A",
     altitude: "N/A",
@@ -377,6 +377,6 @@ export const projectsData = [
     weight: "N/A",
     caption: "自作エンジン、フェアリング解放機構、高度3776m以上の「富士山越え」を目指す。",
     captionEn: "Aiming to surpass Mount Fuji's altitude of 3776m with a custom-built engine and fairing release mechanism.",
-    periodEn: "2027/08予定",
+    periodEn: "2027/08 (Planned)",
   },
 ]
