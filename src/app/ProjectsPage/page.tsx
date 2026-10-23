@@ -5,6 +5,7 @@ import { projectsData } from "./ProjectData"
 import Footer from "@/components/ui/Footer"
 import Header from "@/components/ui/Header"
 import Image from "next/image"
+import Link from "next/link"
 import { Disc } from "lucide-react"
 
 import { useLanguage } from "@/context/LanguageContext"
@@ -16,6 +17,24 @@ export default function ProjectsPage() {
 
   const [activeProject, setActiveProject] = useState<string | null>(null)
   const navRef = useRef<HTMLElement>(null)
+  const sidebarItemRefs = useRef<Record<string, HTMLButtonElement | null>>({})
+  const isNavHoveredRef = useRef(false)
+
+  const centerSidebarItem = (id: string) => {
+    const sidebarItem = sidebarItemRefs.current[id]
+    if (!sidebarItem || !navRef.current) return
+
+    const nav = navRef.current
+    const navRect = nav.getBoundingClientRect()
+    const itemRect = sidebarItem.getBoundingClientRect()
+    const relativeTop = itemRect.top - navRect.top
+    const targetScroll = nav.scrollTop + relativeTop - (nav.clientHeight / 2) + (itemRect.height / 2)
+
+    nav.scrollTo({
+      top: targetScroll,
+      behavior: 'smooth'
+    })
+  }
 
   // Map display categories to data categories
   const categoryMap: { [key: string]: string } = {
@@ -40,25 +59,7 @@ export default function ProjectsPage() {
             setActiveProject(id)
 
             // Auto-scroll sidebar to active item manually
-            const sidebarItem = document.getElementById(`sidebar-item-${id}`)
-            if (sidebarItem && navRef.current) {
-              const nav = navRef.current
-              const navRect = nav.getBoundingClientRect()
-              const itemRect = sidebarItem.getBoundingClientRect()
-
-              // Calculate position relative to the nav container
-              const relativeTop = itemRect.top - navRect.top
-              const currentScroll = nav.scrollTop
-
-              // Target: Center the item in the nav container
-              // target = currentScroll + relativeTop - (navHeight / 2) + (itemHeight / 2)
-              const targetScroll = currentScroll + relativeTop - (nav.clientHeight / 2) + (itemRect.height / 2)
-
-              nav.scrollTo({
-                top: targetScroll,
-                behavior: 'smooth'
-              })
-            }
+            if (!isNavHoveredRef.current) centerSidebarItem(id)
           }
         })
       },
@@ -93,9 +94,9 @@ export default function ProjectsPage() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
 
             {/* Sticky Sidebar */}
-            <aside className="lg:w-1/4 lg:h-[calc(100vh-8rem)] lg:sticky lg:top-32 flex flex-col justify-between overflow-hidden">
+            <aside className="lg:w-1/4 lg:[container-type:inline-size] lg:h-[calc(100vh-8rem)] lg:sticky lg:top-32 flex flex-col justify-between overflow-hidden">
               <div className="flex flex-col h-full">
-                <h1 className="text-6xl font-bold tracking-tighter mb-8 leading-none shrink-0">
+                <h1 className="text-5xl sm:text-6xl lg:text-[clamp(1rem,20cqw,3.75rem)] font-bold tracking-tighter mb-8 leading-none shrink-0">
                   {t.projectsPage.title.split(' ').map((word, i) => (
                     <span key={i}>
                       {word}<br />
@@ -118,11 +119,19 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Project Navigation List */}
-                <nav ref={navRef} className="hidden lg:block space-y-2 overflow-y-auto flex-1 pr-4 custom-scrollbar">
+                <nav
+                  ref={navRef}
+                  onMouseEnter={() => { isNavHoveredRef.current = true }}
+                  onMouseLeave={() => {
+                    isNavHoveredRef.current = false
+                    if (activeProject) centerSidebarItem(activeProject)
+                  }}
+                  className="hidden lg:block space-y-2 overflow-y-auto flex-1 pr-4 custom-scrollbar"
+                >
                   {filteredProjects.map(project => (
                     <button
                       key={project.id}
-                      id={`sidebar-item-${project.id}`}
+                      ref={(element) => { sidebarItemRefs.current[project.id] = element }}
                       onClick={() => scrollToProject(project.id)}
                       onMouseEnter={() => setHoveredProject(project.id)}
                       onMouseLeave={() => setHoveredProject(null)}
@@ -174,7 +183,7 @@ export default function ProjectsPage() {
                   {/* Main Visual */}
                   <div className="relative aspect-video w-full overflow-hidden bg-gray-900 mb-8">
                     <Image
-                      src={project.thumbnail || "/placeholder.svg"}
+                      src={project.thumbnail && project.thumbnail !== "N/A" ? project.thumbnail : "/placeholder.svg"}
                       alt={project.name}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -188,6 +197,17 @@ export default function ProjectsPage() {
                       <p className="text-lg text-gray-300 leading-relaxed font-light">
                         {language === 'en' && project.captionEn ? project.captionEn : project.caption}
                       </p>
+
+                      {project.id === "29" && (
+                        <div className="mt-6">
+                          <Link
+                            href="/Fund&SponsorPage"
+                            className="inline-flex items-center gap-2 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-4 py-2 text-sm font-medium text-emerald-300 transition hover:bg-emerald-400/20"
+                          >
+                            SUPPORT US
+                          </Link>
+                        </div>
+                      )}
                     </div>
 
                     <div className="space-y-4 font-mono text-sm border-l border-white/10 pl-6">

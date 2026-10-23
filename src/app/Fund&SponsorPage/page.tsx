@@ -40,18 +40,76 @@ export default function FundPage() {
           </div>
 
           <div className="max-w-7xl mx-auto px-4 pt-12">
+            {/* 追加箇所 */}
+            <div className="grid lg:grid-cols-12 gap-16 items-start relative">
+
+              {/*left column*/}
+              <div className="lg:col-span-5 relative z-10 pt-8">
+                <div className="flex item-center gap-4 mb-8">
+                  <div className="px-3 py-1 text-green-400 text-xs font-mono tracking-widest uppercase rounded-full flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                    {t.fundPage.bannerp.mission}
+                  </div>
+                </div>
+
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter mb-4">
+                  {t.fundPage.bannerp.title}
+                </h1>
+
+                <div className="mb-8 text-sm font-mono uppercase tracking-wider text-gray-400">
+                  <span className="mr-3 text-gray-500">{t.fundPage.bannerp.period}</span>
+                  <span className="text-lg font-bold text-white">11/22~12/20</span>
+                </div>
+<div className="font-mono text-sm text-gray-400"><span className="mr-2">{t.fundPage.bannerp.goalFunds}</span><span className="font-bold text-white">{t.fundPage.bannerp.goalFundsNumber}</span></div>
+
+
+
+                <div className="text-sm text-gray-500 font-mono uppercase tracking-wider mb-2">
+                  {t.fundPage.bannerp.totalFunds}
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl md:text-8xl font-light text-white font-mono tracking-tighter">
+                    ¥0
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 mt-6 text-gray-400 font-mono text-sm border-l-2 border-emerald-500/30 pl-4">
+                  <Users className="w-4 h-4" />
+                    <span>{t.fundPage.bannerp.supporters}: <span className="text-white font-bold">0</span></span>
+                </div>
+
+              </div>
+
+            
+              {/*light column*/}
+              <div className="lg:col-span-7 relative z-10 lg:pl-12 lg:border-l border-white/10 lg:self-stretch lg:flex lg:items-center">
+                <div className="prose prose-invert max-w-none">
+                  {t.fundPage.bannerp.message.badge && (
+                    <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-light mb-4">
+                      <span className="font-bold text-white">{t.fundPage.bannerp.message.badge}</span>
+                    </p>
+                  )}
+                  {t.fundPage.bannerp.message.title && (
+                    <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-light mb-4">
+                      <span className="font-bold text-white">{t.fundPage.bannerp.message.title}</span>
+                    </p>
+                  )}
+                  {t.fundPage.bannerp.message.body.map((paragraph, index) => (
+                    <p key={index} className="text-xl md:text-2xl text-gray-200 leading-relaxed font-light mb-8">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full h-px bg-white/10" />
 
             <div className="grid lg:grid-cols-12 gap-16 items-start relative">
 
               {/* Left Column: Impact Numbers */}
               <div className="lg:col-span-5 relative z-10 pt-8">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="px-3 py-1 text-green-400 text-xs font-mono tracking-widest uppercase rounded-full flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                    {t.fundPage.banner.mission}
-                  </div>
-                </div>
 
+                
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter mb-4 leading-none">
                   {t.fundPage.banner.title}
                   <br />
@@ -61,12 +119,14 @@ export default function FundPage() {
                 </h1>
 
                 <div className="mt-12">
-                  <div className="text-sm text-gray-500 font-mono uppercase tracking-wider mb-2">{t.fundPage.banner.totalFunds}</div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl md:text-8xl font-light text-white font-mono tracking-tighter">
-                      ¥3,660,000
-                    </span>
-                  </div>
+                <div className="text-sm text-gray-500 font-mono uppercase tracking-wider mb-2">
+                  {t.fundPage.banner.totalFunds}
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl md:text-8xl font-light text-white font-mono tracking-tighter">
+                    ¥3,660,000
+                  </span>
+                </div>
                   <div className="flex items-center gap-3 mt-6 text-gray-400 font-mono text-sm border-l-2 border-emerald-500/30 pl-4">
                     <Users className="w-4 h-4" />
                     <span>{t.fundPage.banner.supporters}: <span className="text-white font-bold">117</span></span>
