@@ -20,7 +20,7 @@ export default function Header() {
             {/* ヘッダー */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
                 <div className="container mx-auto px-2 sm:px-6 lg:px-8">
-                    <div className="relative flex justify-between items-center h-16 max-w-full overflow-hidden">
+                    <div className="relative flex justify-between items-center h-16 max-w-full gap-6">
                         <div className="flex items-center flex-shrink-0">
                             <Link href="/">
                                 <Image
@@ -33,7 +33,7 @@ export default function Header() {
                                 />
                             </Link>
                         </div>
-                        <nav className="hidden md:flex items-center gap-6">
+                        <nav className="hidden xl:flex shrink-0 items-center gap-6">
                             <ul className="flex space-x-4 lg:space-x-8 text-sm text-white/90">
                                 <NavItem href="/" text={t.header.top} caption={t.header.captions.top} />
                                 <NavItem href="/AboutUsPage" text={t.header.about} caption={t.header.captions.about} />
@@ -50,7 +50,7 @@ export default function Header() {
                                 {language === 'ja' ? 'EN' : 'JP'}
                             </button>
                         </nav>
-                        <div className="md:hidden flex items-center gap-4">
+                        <div className="xl:hidden flex items-center gap-4">
                             {!isMenuOpen && (
                                 <>
                                     <button
@@ -79,7 +79,7 @@ export default function Header() {
                         transition={{ duration: 0.2 }}
                     />
                     <motion.div
-                        className="fixed top-0 right-0 h-screen w-3/4 max-w-xs md:hidden z-[999] flex flex-col"
+                        className="fixed top-0 right-0 h-screen w-3/4 max-w-xs xl:hidden z-[999] flex flex-col"
                         initial={{ x: '100%', opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: '100%', opacity: 0 }}
@@ -116,7 +116,7 @@ export default function Header() {
 
 function NavItem({ href, text, caption }: { href: string, text: string, caption: string }) {
     return (
-        <li className="relative font-mono text-lg flex flex-col items-center">
+        <li className="relative shrink-0 whitespace-nowrap font-mono text-lg flex flex-col items-center">
             <a
                 href={href}
                 className="hover:text-white transition-colors px-1"

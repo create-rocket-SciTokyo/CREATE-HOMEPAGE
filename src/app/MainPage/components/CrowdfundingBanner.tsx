@@ -32,9 +32,6 @@ export default function CrowdfundingBanner() {
                 {t.fundPage.bannerp.message.body}
                 <br />
               </div>
-              <div className="mt-2 font-medium text-emerald-400">
-                {t.fundPage.bannerp.message.cta}
-              </div>
             </div>
           </div>
         </div>
@@ -42,12 +39,9 @@ export default function CrowdfundingBanner() {
         <div className="flex shrink-0 flex-col gap-4 sm:flex-row sm:items-center md:flex-col md:items-end lg:flex-row lg:items-center">
           <div className="font-mono text-sm text-gray-400">
             <span className="mr-2 text-xs uppercase tracking-wider">{t.fundPage.bannerp.period}</span>
-            <span className="text-xl font-bold text-white">11/1~12/10</span>
+            <span className="text-xl font-bold text-white">11/22~12/20</span>
           </div>
-          <div className="font-mono text-sm text-gray-400">
-            <span className="mr-2 text-xs uppercase tracking-wider">{t.fundPage.bannerp.goalFunds}</span>
-            <span className="text-xl font-bold text-white">{t.fundPage.bannerp.goalFundsNumber}</span>
-          </div>
+<div className="font-mono text-sm text-gray-400"><span className="mr-2">{t.fundPage.bannerp.goalFunds}</span><span className="font-bold text-white">{t.fundPage.bannerp.goalFundsNumber}</span></div>
           <Link
             href="/Fund&SponsorPage"
             className="group inline-flex h-12 items-center justify-center gap-3 border border-white/20 bg-white px-5 text-sm font-bold tracking-wider text-black transition-colors hover:bg-emerald-400"

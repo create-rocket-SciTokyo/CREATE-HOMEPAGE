@@ -20,7 +20,7 @@ export const translations = {
             bannerp:{
                 mission:"MISSION CONTINUED",
                 title:"CROWDFUNDING",
-                period:"期間",
+                period:"期間（予定）",
                 goalFunds:"目標支援額",
                 goalFundsNumber:"¥1,500,000",
                 totalFunds:"総支援額",
@@ -32,7 +32,7 @@ export const translations = {
                         "私たちは最終目標である「高度100kmの宇宙到達」へ向け、新型自作エンジン「M-8i」や機体回収用カメラを搭載した大型機「C-107M」の開発に挑んでいます。",
                         "富士山の標高を超える「高度3,776m」への挑戦を成功させるため、皆様の温かいご支援をよろしくお願いいたします。"
                     ],
-                    cta: "ご支援はこちら"
+                    cta: ""
                 }
             },
             banner:{
@@ -126,7 +126,7 @@ export const translations = {
                     body: [
                         "宇宙への挑戦を支えるご支援を募っています。"
                     ],
-                    cta: "支援はこちら"
+                    cta: ""
                 }
             },
             ongoing: {
@@ -352,7 +352,7 @@ export const translations = {
             bannerp: {
                 mission: "MISSION CONTINUED",
                 title: "CROWDFUNDING",
-                period: "Campaign Period",
+                period: "Campaign Period (Planned)",
                 goalFunds: "Funding Goal",
                 goalFundsNumber: "¥1,500,000",
                 totalFunds: "Total Raised",
@@ -364,7 +364,7 @@ export const translations = {
                         "We are working toward our ultimate objective of reaching an altitude of 100 km, developing the new large vehicle \"C-107M\" equipped with a self-made engine \"M-8i\" and a recovery camera.",
                         "To successfully complete the challenge of exceeding Fuji's altitude of 3,776 m, we sincerely appreciate your warm support."
                     ],
-                    cta: "Support us"
+                    cta: ""
                 }
             },
             banner: {
@@ -458,7 +458,7 @@ export const translations = {
                     body: [
                         "We are seeking support for our next space challenge."
                     ],
-                    cta: "Support us"
+                    cta: ""
                 }
             },
             ongoing: {

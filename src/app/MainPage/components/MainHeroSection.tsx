@@ -34,9 +34,6 @@ export default function MainHeroSection() {
                     {paragraph}
                 </p>
             ))}
-            {message.cta && (
-                <p className="leading-relaxed text-emerald-300">{message.cta}</p>
-            )}
         </>
     );
 
@@ -159,12 +156,9 @@ export default function MainHeroSection() {
                         <div className="mt-6 flex flex-wrap gap-3 text-[10px] uppercase tracking-[0.18em] text-zinc-200 md:text-xs">
                             <div className="rounded-full border border-white/15 bg-white/5 px-3 py-2">
                                 <span className="mr-2 text-zinc-400">{t.fundPage.bannerp.period}</span>
-                                <span className="font-bold text-white">11/1~12/10</span>
+                                <span className="font-bold text-white">11/22~12/20</span>
                             </div>
-                            <div className="rounded-full border border-white/15 bg-white/5 px-3 py-2">
-                                <span className="mr-2 text-zinc-400">{t.fundPage.bannerp.goalFunds}</span>
-                                <span className="font-bold text-white">{t.fundPage.bannerp.goalFundsNumber}</span>
-                            </div>
+<div className="font-mono text-sm text-gray-400"><span className="mr-2">{t.fundPage.bannerp.goalFunds}</span><span className="font-bold text-white">{t.fundPage.bannerp.goalFundsNumber}</span></div>
                         </div>
 
                         <div className="mt-8 flex flex-wrap items-center gap-4">

@@ -58,29 +58,20 @@ export default function FundPage() {
 
                 <div className="mb-8 text-sm font-mono uppercase tracking-wider text-gray-400">
                   <span className="mr-3 text-gray-500">{t.fundPage.bannerp.period}</span>
-                  <span className="text-lg font-bold text-white">11/1~12/10</span>
+                  <span className="text-lg font-bold text-white">11/22~12/20</span>
                 </div>
+<div className="font-mono text-sm text-gray-400"><span className="mr-2">{t.fundPage.bannerp.goalFunds}</span><span className="font-bold text-white">{t.fundPage.bannerp.goalFundsNumber}</span></div>
+
+
 
                 <div className="text-sm text-gray-500 font-mono uppercase tracking-wider mb-2">
-                  {t.fundPage.bannerp.goalFunds} 
+                  {t.fundPage.bannerp.totalFunds}
                 </div>
-
-                <div className="flex items-baseline gap-2">
-                    <div className="text-5xl md:text-8xl font-light text-white font-mono tracking-tighter">
-                      {t.fundPage.bannerp.goalFundsNumber}
-                    </div>
-                </div>
-
-                <div className="text-sm text-gray-500 font-mono uppercase tracking-wider mb-2">
-                  {t.fundPage.bannerp.totalFunds} 
-                </div>
-
                 <div className="flex items-baseline gap-2">
                   <span className="text-5xl md:text-8xl font-light text-white font-mono tracking-tighter">
                     ¥0
                   </span>
                 </div>
-
                 <div className="flex items-center gap-3 mt-6 text-gray-400 font-mono text-sm border-l-2 border-emerald-500/30 pl-4">
                   <Users className="w-4 h-4" />
                     <span>{t.fundPage.bannerp.supporters}: <span className="text-white font-bold">0</span></span>
@@ -107,11 +98,6 @@ export default function FundPage() {
                       {paragraph}
                     </p>
                   ))}
-                  {t.fundPage.bannerp.message.cta && (
-                    <p className="text-xl md:text-2xl text-emerald-300 leading-relaxed font-light">
-                      {t.fundPage.bannerp.message.cta}
-                    </p>
-                  )}
                 </div>
               </div>
             </div>
@@ -133,12 +119,14 @@ export default function FundPage() {
                 </h1>
 
                 <div className="mt-12">
-                  <div className="text-sm text-gray-500 font-mono uppercase tracking-wider mb-2">{t.fundPage.banner.totalFunds}</div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl md:text-8xl font-light text-white font-mono tracking-tighter">
-                      ¥3,660,000
-                    </span>
-                  </div>
+                <div className="text-sm text-gray-500 font-mono uppercase tracking-wider mb-2">
+                  {t.fundPage.banner.totalFunds}
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl md:text-8xl font-light text-white font-mono tracking-tighter">
+                    ¥3,660,000
+                  </span>
+                </div>
                   <div className="flex items-center gap-3 mt-6 text-gray-400 font-mono text-sm border-l-2 border-emerald-500/30 pl-4">
                     <Users className="w-4 h-4" />
                     <span>{t.fundPage.banner.supporters}: <span className="text-white font-bold">117</span></span>
